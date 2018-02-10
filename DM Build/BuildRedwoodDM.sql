@@ -12,7 +12,7 @@ USE RedwoodDM
 --
 IF EXISTS(
 	SELECT *
-	FROM sys.tables
+	FROM sys.tables2
 	WHERE name = N'FactSales'
        )
 	DROP TABLE FactSales;
