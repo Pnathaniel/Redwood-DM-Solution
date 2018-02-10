@@ -109,7 +109,7 @@ CREATE TABLE DimDate
 CREATE TABLE FactSales
 	(Listing_Date	DATE		CONSTRAINT	fk_FactSales_DimDate	FOREIGN KEY REFERENCES	DimDate(Date_SK)	NOT NULL,
 	Customer_SK		INT			CONSTRAINT	fk_FactSales_DimCustomer FOREIGN KEY REFERENCES	DimCustomer(Customer_SK) NOT NULL,
-	Property_SK		INT			CONSTRAINT	fk_Proper_DimProperty FOREIGN KEY REFERENCES	DimProperty(Property_SK) NOT NULL,
+	Property_SK		INT			CONSTRAINT	fk_Proper_DimProperty	FOREIGN KEY REFERENCES	DimProperty(Property_SK) NOT NULL,
 	Agent_SK		INT			CONSTRAINT	fk_Agent_DimAgent		FOREIGN KEY REFERENCES	DimAgent(Agent_SK) NOT NULL,
 	Offer_SK		INT			CONSTRAINT	fk_FactSales_DimOffer	FOREIGN KEY REFERENCES	DimOffer(Offer_SK) NOT NULL,
 	Asking_Price	MONEY		NOT NULL,
